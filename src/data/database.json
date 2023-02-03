@@ -1,0 +1,61 @@
+{
+  "utilisateur": {
+      "id": 1,
+      "nom": "Ando Mickael",
+      "pseudo": "ando__mickael",
+      "email": "ando@gmail.com",
+      "compte": 150000
+    },
+    "encheres": [
+      {
+        "id": 1,
+        "nom": "Clavier mecanique",
+        "categorie": "Informatique",
+        "dateDebut": "2022-01-01 01:00:00",
+        "duree": "2h",
+        "prix": 15000,
+        "proprietaire": "Rakoto",
+        "status": 1
+      },
+      {
+        "id": 2,
+        "nom": "Clavier",
+        "categorie": "Informatique",
+        "dateDebut": "2022-01-01 01:00:00",
+        "duree": "2h",
+        "prix": 15000,
+        "proprietaire": "Rakoto",
+        "status": 0
+      },
+      {
+        "id": 3,
+        "nom": "Clavier",
+        "categorie": "Informatique",
+        "dateDebut": "2022-01-01 01:00:00",
+        "duree": "2h",
+        "prix": 15000,
+        "proprietaire": "Rakoto",
+        "status": 1
+      },
+      {
+        "id": 4,
+        "nom": "Clavier",
+        "categorie": "Informatique",
+        "dateDebut": "2022-01-01 01:00:00",
+        "duree": "2h",
+        "prix": 15000,
+        "proprietaire": "Rakoto",
+        "status": 1
+      },
+      {
+        "id": 5,
+        "nom": "Clavier",
+        "categorie": "Informatique",
+        "dateDebut": "2022-01-01 01:00:00",
+        "duree": "2h",
+        "prix": 15000,
+        "proprietaire": "Rakoto",
+        "status": 0
+      }
+    ]
+}
