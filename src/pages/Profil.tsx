@@ -1,4 +1,4 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonProgressBar, IonTitle, IonToolbar } from "@ionic/react";
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonProgressBar, IonRefresher, IonRefresherContent, IonTitle, IonToolbar, RefresherEventDetail } from "@ionic/react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { BtnAjoutEnchere } from "../components/BtnAjoutEnchere";
@@ -16,12 +16,19 @@ export const Profil: React.FC = () => {
 
     function getEncheres() {
         const url = baseUrl + `/encheresByUtilisateur/${utilisateurId}`;
-        
+
         axios.get(url)
             .then((response) => {
                 setEncheres(response.data);
                 setIsLoad(true);
             });
+    }
+
+    function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
+        setTimeout(() => {
+            getEncheres();
+            event.detail.complete();
+        }, 2000);
     }
 
     useEffect(() => {
@@ -52,6 +59,9 @@ export const Profil: React.FC = () => {
                     </IonToolbar>
                 </IonHeader>
                 <IonContent>
+                    <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
+                        <IonRefresherContent></IonRefresherContent>
+                    </IonRefresher>
                     <InfoUtilisateur />
                     <h2 className="ion-padding">Mes encheres</h2>
                     <ListeEncheres encheres={encheres} />

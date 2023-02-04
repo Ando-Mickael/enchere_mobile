@@ -28,8 +28,6 @@ export const FormAjoutEnchere: React.FC = () => {
             "img": img
         };
 
-        console.log(data);
-
         axios.post(url, data)
             .then((response) => {
                 console.log(response);
